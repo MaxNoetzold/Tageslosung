@@ -8,9 +8,9 @@ Dies beinhaltet ein einfaches Skript, um die aktuelle Evangelische Tageslosung p
 
 Die Losungen müssen als `CSV / TXT (Tab getrennt)` von https://www.losungen.de/digital/daten heruntergeladen werden.
 
-Danach müssen sie ins UTF-8 Format gebracht werden. Dies geht zum Beispiel mit Nodepad++. Dafür muss die Datei mit dem Programm geöffnet und daraufhin oben im Menü Codierung / Konvertiere zu UTF-8 ausgewählt werden.
+Danach müssen sie ins UTF-8 Format gebracht werden. Dies geht zum Beispiel mit Nodepad++. Dafür muss die Datei mit dem Programm geöffnet und daraufhin oben im Menü `Codierung` / `Konvertiere zu UTF-8` ausgewählt werden.
 
-Im letzten Schritt müssen die Dateien auf eurem Server gehostet werden, damit das Skript darauf zugreifen kann.
+Im letzten Schritt müssen die Dateien auf eurem Server gehostet werden, damit das Skript darauf zugreifen kann. Der Dateiname muss folgendermaßen aussehen: "Losungen20XX.csv".
 
 ### 2. Skript einbinden
 
