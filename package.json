@@ -2,7 +2,7 @@
   "name": "losungen",
   "version": "1.0.0",
   "description": "Heutiger Losungstext als HTML Nodes.",
-  "main": "losungen.js",
+  "main": "src/losungen.js",
   "scripts": {
     "start": "node src/losungen.js",
     "build": "esbuild src/losungen.js --bundle --outfile=build/bundle.js --target=es6",
