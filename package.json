@@ -1,0 +1,25 @@
+{
+  "name": "losungen",
+  "version": "1.0.0",
+  "description": "Heutiger Losungstext als HTML Nodes.",
+  "main": "losungen.js",
+  "scripts": {
+    "start": "node src/losungen.js",
+    "build": "esbuild src/losungen.js --bundle --outfile=build/bundle.js --target=es6",
+    "test": "jest tests/losungen.test.js"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./jest.setup.js"
+    ]
+  },
+  "author": "Max Nötzold <max.noetzold@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.19.5",
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "papaparse": "^5.4.1"
+  }
+}
