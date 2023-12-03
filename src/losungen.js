@@ -26,7 +26,10 @@ function loadCSVFile(csvUrl) {
 
 function getTodayString() {
   const today = new Date();
-  return `${today.getDate()}.${today.getMonth() + 1}.${today.getFullYear()}`;
+  const day = String(today.getDate()).padStart(2, '0');
+  const month = String(today.getMonth() + 1).padStart(2, '0');
+  const year = today.getFullYear();
+  return `${day}.${month}.${year}`;
 }
 
 // function that gets the parsed losung rows and returns todays losung
