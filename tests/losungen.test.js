@@ -6,14 +6,24 @@ const {
 } = require("../src/losungen.js");
 
 describe("getTodayString", () => {
-  it("should return today's date in the format dd.mm.yyyy", () => {
+  it("should return today's date in the format dd.mm.yyyy for single digit day", () => {
     // Mock today's date to a known value
     const mockDate = new Date("2022-01-01T00:00:00.000Z");
     jest.spyOn(global, "Date").mockImplementation(() => mockDate);
 
     const result = getTodayString();
 
-    expect(result).toEqual("1.1.2022");
+    expect(result).toEqual("01.01.2022");
+  });
+
+  it("should return today's date in the format dd.mm.yyyy for multi digit day", () => {
+    // Mock today's date to a known value
+    const mockDate = new Date("2022-11-11T00:00:00.000Z");
+    jest.spyOn(global, "Date").mockImplementation(() => mockDate);
+
+    const result = getTodayString();
+
+    expect(result).toEqual("11.11.2022");
   });
 });
 
