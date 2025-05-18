@@ -14,7 +14,7 @@ Im letzten Schritt müssen die Dateien auf eurem Server gehostet werden, damit d
 
 ### 2. Skript einbinden
 
-Das fertige Skript befindet sich im `build` Ordner. Die dort vorhandene `bundle.js` Datei muss ebenfalls auf eurem Server gehostet werden.
+Das fertige Skript befindet sich im `js/build` Ordner. Die dort vorhandene `bundle.js` Datei muss ebenfalls auf eurem Server gehostet werden.
 
 Das Skript braucht folgende HTML Elemente um zu funktionieren:
 
