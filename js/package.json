@@ -16,10 +16,10 @@
   "author": "Max Nötzold <max.noetzold@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "esbuild": "^0.19.5",
+    "esbuild": "^0.25.4",
     "jest": "^29.7.0"
   },
   "dependencies": {
-    "papaparse": "^5.4.1"
+    "papaparse": "^5.5.2"
   }
 }
