@@ -9,6 +9,8 @@
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Helper\ModuleHelper;
+
 require_once __DIR__ . '/helper.php';
 
 // Get module parameters
@@ -18,4 +20,4 @@ $csvFolderPath = $params->get('csv_folder', 'modules/mod_losung/data');
 $todaysBibleVerse = ModDailyBibleVerseHelper::getTodaysLosung($csvFolderPath);
 
 // Include layout file
-require JModuleHelper::getLayoutPath('mod_losung', $params->get('layout', 'default'));
+require ModuleHelper::getLayoutPath('mod_losung', $params->get('layout', 'default'));

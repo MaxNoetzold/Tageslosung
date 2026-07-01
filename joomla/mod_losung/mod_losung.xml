@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="3.9" client="site" method="upgrade">
+<extension type="module" client="site" method="upgrade">
     <name>MOD_LOSUNG</name>
     <author>Max Nötzold</author>
     <creationDate>May 2025</creationDate>
     <copyright>Copyright (C) 2025 Max Nötzold. All rights reserved.</copyright>
     <license>ISC</license>
     <authorEmail>max.noetzold@gmail.com</authorEmail>
-    <version>1.0.0</version>
+    <version>1.1.1</version>
     <description>MOD_LOSUNG_XML_DESCRIPTION</description>
     
     <files>

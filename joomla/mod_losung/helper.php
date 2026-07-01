@@ -9,6 +9,9 @@
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Factory;
+use Joomla\CMS\Language\Text;
+
 /**
  * Helper class for Random CSV module
  */
@@ -22,12 +25,12 @@ class ModDailyBibleVerseHelper
      */
     public static function getTodaysLosung($csvFolderPath)
     {
-        $date = new JDate();
+        $date = new DateTime();
         $currentYear = $date->format('Y');
         $todayString = $date->format('d.m.Y');
         
         $csvFileName = 'Losungen' . $currentYear . '.csv';
-        $csvFilePath = JPATH_ROOT . '/' . $csvFolderPath . '/' . $csvFileName;
+        $csvFilePath = rtrim(JPATH_ROOT . '/' . trim($csvFolderPath, '/'), '/') . '/' . $csvFileName;
         
         // Initialize return variable
         $todaysEntry = null;
@@ -37,7 +40,7 @@ class ModDailyBibleVerseHelper
                 // If needed at some time one could make the delimiter configurable
                 while (($data = fgetcsv($handle, 1000, "\t")) !== false) {
                     // In the csv we expect the date to be in the first column
-                    if (isset($data[0]) && $data[0] === $todayString) {
+                    if (!empty($data[0]) && $data[0] === $todayString) {
                         $todaysEntry = $data;
                         break;
                     }
@@ -46,8 +49,8 @@ class ModDailyBibleVerseHelper
                 fclose($handle);
             }
         } else {
-            JFactory::getApplication()->enqueueMessage(
-                JText::sprintf('MOD_LOSUNG_FILE_ERROR_SPECIFIC', $csvFileName),
+            Factory::getApplication()->enqueueMessage(
+                Text::sprintf('MOD_LOSUNG_FILE_ERROR_SPECIFIC', $csvFileName),
                 'warning'
             );
         }
